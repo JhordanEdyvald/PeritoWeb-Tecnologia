@@ -1,0 +1,1032 @@
+body {
+    background: #d8d8da;
+    margin: 0 auto;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+
+    /*height: 10000px;*/
+}
+
+::selection {
+    background-color: #3e0c44;
+    color: aqua;
+}
+
+* {
+    margin:0;
+    padding:0;
+}
+
+@font-face {
+    font-family: teste;
+    src: url(BalsamiqSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: para titulos;
+    src: url(RobotoCondensed-Light.ttf);
+}
+
+@font-face {
+    font-family: fina;
+    src: url(calibril.ttf);
+}
+
+#navbarj {
+    width: 100%;
+    height: 60px;
+    background-color: #0D0D0D;
+    color: #D7D7D9;
+    margin: 0px 0px 0px 0px;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-name: animrgb;
+    transition: 350ms ease;
+}
+
+@keyframes animrgb {
+    /*0% {background-color: #BF0F50;}
+    10% {background-color: #F21D81;}
+    20% {background-color: #AB04D9;}
+    30% {background-color: #00F5ED;}
+    40% {background-color: #05F228;}
+    50% {background-color: #00F5ED;}
+    60% {background-color: #AB04D9;}
+    85% {background-color: #F21D81;}
+    100% {background-color: #BF0F50;}*/
+
+    0% {box-shadow: #BF0F50 0px 3px 3px;}
+    10% {box-shadow: #F21D81 0px 3px 3px;}
+    20% {box-shadow: #AB04D9 0px 3px 3px;}
+    30% {box-shadow: #00F5ED 0px 3px 3px;}
+    40% {box-shadow: #05F228 0px 3px 3px;}
+    50% {box-shadow: #00F5ED 0px 3px 3px;}
+    60% {box-shadow: #AB04D9 0px 3px 3px;}
+    85% {box-shadow: #F21D81 0px 3px 3px;}
+    100% {box-shadow: #BF0F50 0px 3px 3px;}
+
+}
+
+#logo {
+    width:100px;
+    height:100px;
+    position: absolute;
+    top: 30px;
+}
+
+#botoesnav {
+    list-style: none;
+    display:flex;
+    position:relative;
+    top:20px;
+}
+
+.botaonav {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: monospace;
+}
+
+.botaonav:hover {
+    color:#D98859;
+}
+
+.selecionado {
+    color:#A6948D;
+}
+
+#dropdownnn {
+    display: none;
+}
+
+#banner {
+    margin-top: 3px;    
+}
+
+#imgsec1 {
+    width:200px;
+    height: 200px;
+    position:relative;
+    top:40px;
+    right:60px;
+    display: inline-block;
+}
+
+#imgsec2 {
+    width:200px;
+    height: 200px;
+    position:relative;
+    top:40px;
+    display: inline-block;
+    left:60px;
+}
+
+#background1 {
+    width: 100%;
+    overflow: hidden;
+    height: 500px;
+}
+
+#par1 {
+    position:initial;
+}
+
+#par2 {
+   position: relative;
+   top:50px;
+  
+}
+
+.parag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.textosec {
+    top: 60px;
+    height: 200px;
+    width: 400px;
+    font-size: 1em;
+    text-align: left;
+    line-height: 1.6;
+    display: inline-block;
+    position: relative;
+    font-family: teste,'Dongle', sans-serif;
+}
+
+#texto1 {
+    left:60px;
+}
+
+#texto2 {
+    right:60px;
+}
+
+.anime {
+    opacity: 0;
+    transform: translate3d(-100px,0,0);
+    transition: .3s;
+}
+
+.anime-start {
+    opacity: 100%;
+    transform: translate3d(0,0,0);
+}
+
+
+[data-anime] {
+    opacity: 0;
+    transition: .3s;
+}
+
+[data-anime="left"] {
+    transform: translate3d(-70px, 0px, 0px);
+}
+
+[data-anime="right"] {
+    transform: translate3d(70px, 0px, 0px);
+}
+
+[data-anime="down"] {
+    transform: translate3d(0px, -70px, 0px);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+#paralaxdiv {
+    background-image: url("img/teclado.jpg");
+
+  /* Set a specific height */
+  min-height: 450px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 150px;
+  background-color: #3e0c44;
+  text-align: center;
+}
+
+#videocontent {
+    text-align: center;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    position: relative;
+    top: 120px;
+    width: 100%;
+}
+
+#containerform {
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+}
+
+#player {
+    width: 140px;
+    height: 145px;
+    top:100px;
+}
+
+#player:hover {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: animhoverplay;
+    transition: 350ms ease-in-out;
+}
+
+@keyframes animhoverplay {
+    0%{transform:translate3d(0px,0px,0px);}
+    25%{transform:rotate(25deg) translate3d(0px,-10px,0px);}
+    50%{transform:rotate(-25deg) translate3d(0px, -20px, 0px);}
+    75%{transform:rotate(0deg);}
+    100%{transform:translate3d(0px,0px,0px);}
+}
+
+#textovideo {
+    width: 500px;
+    color:#fff;
+    text-align: center;
+    font-family: Calibri light;
+    margin:0 auto;
+}
+
+#banner2{
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    background-color: rgb(0, 0, 0);
+}
+
+#jogartopo {
+    background-color: #00ffb0;
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    display:none;
+    position: fixed;
+    bottom:15px;
+    left: 21px;
+    opacity: 0.4;
+    transition: 3s;
+}
+    
+#jogartopo:hover {
+    opacity: 0.7;
+}
+
+
+#tituloform {
+    position: relative;
+    top: 20px;
+}
+
+#textoform {
+    width: 500px;
+    line-height: 25px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    top: 80px;
+    font-family: teste,'Dongle', sans-serif;
+    font-size: 1em;
+    right: 40px;
+}
+
+#formulariosec {
+    height: 500px;
+    text-align: center;
+    background-image: url("img/fundodoform.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+.titulos {
+    font-family: para titulos, 'Dongle', sans-serif;
+    text-align: center;
+}
+
+#contanierform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#formulario {
+    text-align: left;
+    display: inline-block;
+    position: relative;
+    top: 130px;
+    left: 0;
+    right: 0;
+}
+
+.formclasse {
+    width: 300px;
+}
+
+#rodape {
+    width: 100%;
+    height:250px;
+    background: rgb(0, 0, 0);
+    border-top:rgb(47, 7, 70) solid 3px;
+}
+
+.rodape123 {
+    width: 100%;
+    height:250px;
+    background: rgb(0, 0, 0);
+    border-top:rgb(47, 7, 70) solid 3px;
+}
+
+#rodape_produtos {
+    position: relative;
+    top:0;
+}
+
+#logorodape{
+    width: 130px;
+    height: 130px;
+}
+
+#rodapedescricao {
+    width: 500px;
+    margin-left:200px;
+}
+
+#textodescricaorodape {
+    color: #fff;
+    font-family: calibri light;
+    text-align: left;
+}
+
+#horario {
+    width: 500px;
+    height: 100px;
+    margin-left: 10px;
+    border-left: #fff solid 3px;
+    padding-left: 15px;
+}
+
+#paraflex {
+    display: flex;
+    width: 100%;
+    height: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#containerdeprodutos {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+
+#textodocatalogobtn {
+    font-family: para titulos, 'Dongle', sans-serif;
+    position: relative;
+    top: 40px;
+}
+
+#gradedeitens {
+    /*border: 1px #000 solid;*/
+    width: 595px;
+    height: 200px;
+    display: inline-flex;
+    position: relative;
+    padding: 1px;
+    top: 100px;
+}
+
+#gradecel {
+    position: none;
+    bottom: none;
+    justify-content: none;
+    left: none;
+    display: flex;
+    width: 300px;
+}
+
+.itens {
+    border: #000000 solid 1px;
+    width: 144px;
+    height: 189px;
+    margin: 3px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.itens:hover {
+    background-color: rgb(240, 240, 240);
+    transition: .3s;
+}
+
+.iconesdeprodutos {
+    width: 100px;
+    height: 100px;
+    margin-bottom: -13px;
+}
+
+.textodeprodutos {
+    color: #ff3304;
+    font-size: 0.8em;
+    padding: 5px;
+    font-family: teste,'Dongle', sans-serif;
+    line-height: 17px;
+}
+
+/*AREA DE PRODUTOS!! INICIO*/
+
+.caixa_de_produtos {
+    border: 1px #000000 solid;
+    width: 700px;
+    display: block;
+    position: relative;
+    top: 257px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.niveldeproduto {
+    margin-bottom: 30px;
+}
+
+.conteudo_caixa_produtos {
+    text-align: center;
+}
+
+#curriculodiv {
+    width: 100px;
+    display: block;
+    margin: auto;
+}
+
+.tituloquadrodeprodutos {
+    font-family: para titulos, 'Dongle', sans-serif;
+    position: relative;
+    top: 7px;
+    font-size: 25px;
+    color: #000;
+}
+
+.Tdescr1produto {
+    color: #000000;
+    font-size: 18px;
+    font-family: 'para titulos','Dongle', sans-serif;
+    text-align: left;
+    top: 15px;
+    position: relative;
+    margin-left: 102px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.Pdescr1produto {
+    width: 600px;
+    display: block;
+    margin:0 auto;
+    text-align: left;
+    font-family: calibri light;
+}
+
+.botatipodecompra1 {
+    display: inline-block;
+    margin: 15px auto;
+    position: relative;
+    right: 60px;
+}
+
+.botatipodecompra2 {
+    display: inline-block;
+    margin: 15px auto;
+    position: relative;
+    border-left: #000 1px solid;
+    padding-left: 12px;
+}
+
+#comprar {
+    width: 50%;
+    height: 30px;
+    color: green;
+    font-family: 'teste','Dongle', sans-serif;
+    font-size: 1em;
+    line-height: 33px;
+    border-radius: 6px;
+    border: 1px green solid;
+    transition: .3s;
+}
+
+#comprar:hover {
+    width: 50%;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    font-family: 'teste','Dongle', sans-serif;
+    font-size: 1em;
+    line-height: 33px;
+    border-radius: 6px;
+    border: 1px rgb(57, 250, 105) solid;
+    background-color: green;
+    transition: .3s;
+}
+
+#produativo{
+    display: block;
+    height: 1100px;
+    overflow: hidden;
+    transition: ease-in-out .5s;
+}
+
+
+#devweb{
+    display: block;
+    height: 0;
+    overflow: hidden;
+    transition: ease-in-out .5s;
+    border: none;
+}
+
+
+#socialmedia {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    border: none;
+    transition: ease-in-out .5s;
+}
+
+#artedig {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    border: none;
+    transition: ease-in-out .5s;
+}
+
+#curric {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    border: none;
+    transition: ease-in-out .5s;
+}
+
+
+/*AREA DE PRODUTOS!! FIM*/
+
+.titulos_e_letras_grandres {
+    font-family: para titulos,'Dongle', sans-serif;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    top: 20px;
+    position: relative;
+}
+
+.iconecontatoimg {
+    width: 60px;
+    height: 60px;
+}
+
+#icones_de_contato {
+    display: grid;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 180px;
+    grid-template-columns: auto auto;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 70px;
+}
+
+#icone_botao {
+    width: 60px;
+    height: 60px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#bannerparalaxcontatos {
+  min-height: 264px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #3e0c44;
+  background-image: url("https://super.abril.com.br/wp-content/uploads/2021/02/SI_424_ORCL_Telefone-com-fio.png");
+}
+
+#aba_de_comentar {
+    width: 100%;
+    height: 600px;
+    background-color: #ffa800;
+    text-align: center;
+    color: #0047B3;
+}
+
+.preencher_contatos {
+    margin: 13px;
+    width: 300px;
+    height: 40px;
+    color: #000000;
+    font-family: 'para titulos','Dongle', sans-serif;
+}
+
+#formu_contatos {
+    width: 350px;
+    height: 200px;
+    position: relative;
+    display: inline-block;
+    top: 80px;
+}
+
+.quem_somos_nos {
+    margin-top: 40px;
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.quem_somos_nos p {
+    width: 660px;
+    line-height: 23px;
+    text-align: right;
+    font-family: teste,'Dongle', sans-serif;
+    font-size: 0.8em;
+    margin-left: 30px;
+}
+
+.quem_somos_nos img {
+    object-fit: cover;
+    width: 636px;
+    height: 354px;
+    margin-left: 24px;
+    margin-right: 30px;
+    border: black solid 1px;
+}
+
+#brasa_section {
+    height: 432px;
+    margin-bottom: 0;
+}
+
+#bannerparalaxquemsomos {
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat:revert;
+    background-color: #252525;
+    background-image: url("https://startupi.com.br/wp-content/uploads/2016/07/investidor-anjo-ideia.jpg");
+  }
+
+#slidr {
+    display: block;
+    position: relative;
+    top: 296px;
+    text-align: center;
+    opacity: 0;
+}
+
+@media screen and (max-width: 985px) {
+    #botoesnav {
+        display: block;
+        background-color: #0D0D0D;
+        position: relative;
+        top:59px;
+        height:0px; /*para aumentar ao tamanho total deve ser setado em 160px*/
+        overflow: hidden;
+        transition: 350ms ease;
+        margin: 0px;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-name: animrgb;
+    }
+
+    #dropdownnn {
+        display: block;
+        transform: rotate(0deg);
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        margin-top: 13px;
+        margin-left: 30px;
+        object-fit: cover;
+        transition: ease 600ms;
+    }
+
+}
+
+@media screen and (max-width: 764px) {
+
+    #rodapedescricao {
+        width: 500px;
+        position: relative;
+        top: 25px;
+        margin-left: 100px;
+    }
+
+    .quem_somos_nos {
+        margin-top: 40px;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quem_somos_nos p {
+        width: 100%;
+        line-height: 23px;
+        text-align: center;
+        font-family: teste,'Dongle', sans-serif;
+        font-size: 1em;
+        margin-left: 0;
+    }
+
+    .quem_somos_nos img {
+        object-fit: cover;
+        width: 100%;
+        height: 354px;
+        margin:0 auto;
+        border: black solid 1px;
+    }
+
+    #brasa_section {
+        height: 500px;
+    }
+    
+
+}
+
+@media screen and (max-width: 740px) {
+    #gradecel {
+        position: relative;
+        bottom: 384px;
+        justify-content: center;
+        left: 150px;
+        display: block;
+        width: 100px;
+    }
+
+    #gradedeitens {
+        width: 304px;
+        height: 390px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        position: relative;
+        padding: 1px;
+        top: 100px;
+    
+    }
+
+    .caixa_de_produtos {
+        border: 1px #000000 solid;
+        width: 100%;
+        display: block;
+        position: relative;
+        top: 406px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+}
+
+@media screen and (max-width:605px) {
+    .Pdescr1produto {
+        width: 460px;
+        display: block;
+        margin:0 auto;
+        text-align: left;
+        font-family: calibri light;
+    }
+    
+    .botatipodecompra1 {
+        display: block;
+        margin: 15px auto;
+        position: relative;
+        width: 215px;
+        right: 0px;
+    }
+    
+    .botatipodecompra2 {
+        width: 400px;
+        display: block;
+        margin: 15px auto;
+        position: relative;
+        border-left: #000 1px solid;
+        padding-left: 12px;
+    }
+
+    #produativo{
+        display: block;
+        height: 1500px;
+        overflow: hidden;
+        transition: ease-in-out .5s;
+    }
+    
+}
+
+@media screen and (max-width: 520px) {
+    #paraflex {
+        display: inline-block;
+        width: 100%;
+        height: 0;
+        justify-content: none;
+        align-items: none;
+        text-align: center;
+    }
+    
+    .Pdescr1produto {
+        width: 324px;
+        display: block;
+        margin:0 auto;
+        text-align: left;
+        font-family: calibri light;
+    }
+    
+    #produativo{
+        display: block;
+        height: 1730px;
+        overflow: hidden;
+        transition: ease-in-out .5s;
+    }
+    
+    #rodape {
+        width: 100%;
+        height: 450px;
+        background: rgb(0, 0, 0);
+        border-top: rgb(47, 7, 70) solid 3px;
+    }
+    
+    #rodapedescricao {
+        width: 300px;
+        position: relative;
+        margin: 0;
+        display: inline-block;
+        margin-left: 10px;
+    }
+    
+    #horario {
+        width: 330px;
+        height: 100px;
+        margin-left: 10px;
+        border-top: #fff solid 1px;
+        padding-left: 15px;
+        position: relative;
+        top: 39px;
+        border-left: none;
+        display: inline-block;
+    }
+    
+    #textodescricaorodape {
+        color: #fff;
+        font-family: calibri light;
+        text-align: left;
+        font-size: 14px;
+    }
+}
+/*PAGINA INICIAL*/
+@media screen and (max-width:762px) {
+    #imgsec1 {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        top: 40px;
+        right: 0px;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    #background1 {
+        height: 700px;
+    }
+
+    .parag {
+        display: block;
+        justify-content: none;
+        align-items: none;
+    }
+
+    #texto1 {
+        left: 0;
+    }
+
+    .textosec {
+        top: 77px;
+        height: 200px;
+        width: 100%;
+        font-size: 1em;
+        text-align: center;
+        display: block;
+        position: relative;
+        font-family: teste,'Dongle', sans-serif;
+        margin: 0 auto;
+    }
+
+    #texto2 {
+        right: 0;
+        display: block;
+        top: 138px;
+        margin: 0 auto;
+    }
+
+    #imgsec2 {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        left: 0;
+        top:-246px;
+    }
+
+    #paralaxdiv {
+        margin-top: 0;
+    }
+
+    #textoform {
+        right:0;
+    }
+}
+
+@media screen and (max-width:567px) {
+    .textosec {
+        height: 0.8em;
+    }
+
+    #par2 {
+        position: relative;
+        top: 43%;
+    }
+
+    #texto2 {
+    }
+
+    #imgsec2 {
+        top:-52px;
+    }
+
+    #paralaxdiv {
+        margin-top: 50px;
+    }
+
+    #textovideo {
+        width: 100%;
+    }
+
+    #textoform {
+        width: 100%;
+    }
+
+    #formulario {
+        top: 80px;
+    }
+
+    #horario {
+        width: 280px;
+    }
+    #textodescricaorodape {
+        display: inline-block;
+        width: 100%;
+    }
+
+
+    #background1 {
+        height: 800px;
+    }
+
+    .rodape123 {
+        width: 100%;
+        height: 450px;
+        background: rgb(0, 0, 0);
+        border-top: rgb(47, 7, 70) solid 3px;
+        margin-top: 200px;
+    }
+
+    .caixa_de_produtos {
+        top:508px;
+    }
+
+    #brasa_section {
+        height: 650px;
+    }
+
+}
+/*PAGINA INICIAL*/
